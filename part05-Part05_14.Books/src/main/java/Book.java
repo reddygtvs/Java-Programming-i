@@ -1,0 +1,33 @@
+
+public class Book {
+
+    private String name;
+    private int publicationYear;
+
+    public Book(String name, int publicationYear) {
+        this.name = name;
+        this.publicationYear = publicationYear;
+    }
+    public boolean equals(Object compared) {
+        if (this == compared) {
+            return true;
+        }
+        if (!(compared instanceof Book)) {
+            return false;
+        }
+        Book comparedWith = (Book) compared;
+        if (this.name.equals(comparedWith.name) && this.publicationYear == comparedWith.publicationYear) {
+            return true;
+        }
+        return false;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getPublicationYear() {
+        return publicationYear;
+    }
+
+}
